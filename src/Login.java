@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class Login extends JFrame {
 
-    Login() {
+    Login(){
         setSize(800, 480);
         setVisible(true);        
     }
