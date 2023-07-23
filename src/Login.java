@@ -5,11 +5,11 @@ import java.awt.event.*;
 
 public class Login extends JFrame implements ActionListener {
 
-    JButton signin = new JButton("SIGN IN");
-    JButton clear = new JButton("CLEAR");
-    JButton signup = new JButton("SIGNUP");
-    JTextField cardTextField = new JTextField();
-    JPasswordField pinTextField = new JPasswordField();
+    JButton signin;
+    JButton clear;
+    JButton signup;
+    JTextField cardTextField;
+    JPasswordField pinTextField;
 
     Login(){
 
@@ -33,6 +33,7 @@ public class Login extends JFrame implements ActionListener {
         cardno.setFont(new Font("Raleway", Font.BOLD, 28));
         add(cardno);
 
+        JTextField cardTextField = new JTextField();
         cardTextField.setBounds(300, 150, 230, 30);
         add(cardTextField);
 
@@ -41,23 +42,29 @@ public class Login extends JFrame implements ActionListener {
         pin.setFont(new Font("Raleway", Font.BOLD, 28));
         add(pin);
 
+        JPasswordField pinTextField = new JPasswordField();
         pinTextField.setBounds(300, 220, 230, 30);
         add(pinTextField);
         
+        JButton signin = new JButton("SIGN IN");
         signin.setBounds(300, 300, 100, 30);
         signin.setBackground(Color.BLACK);
         signin.setForeground(Color.WHITE);
         signin.addActionListener(this);
         add(signin);
 
+        JButton clear = new JButton("CLEAR");
         clear.setBounds(430, 300, 100, 30);
         clear.setBackground(Color.BLACK);
         clear.setForeground(Color.WHITE);
+        clear.addActionListener(this);
         add(clear);
 
+        JButton signup = new JButton("SIGNUP");
         signup.setBounds(300, 350, 230, 30);
         signup.setBackground(Color.BLACK);
         signup.setForeground(Color.WHITE);
+        signup.addActionListener(this);
         add(signup);
 
         getContentPane().setBackground(Color.WHITE);;
