@@ -33,8 +33,9 @@ public class Login extends JFrame implements ActionListener {
         cardno.setFont(new Font("Raleway", Font.BOLD, 28));
         add(cardno);
 
-        JTextField cardTextField = new JTextField();
+        cardTextField = new JTextField();
         cardTextField.setBounds(300, 150, 230, 30);
+        cardTextField.setFont(new Font("Arial", Font.BOLD, 14));
         add(cardTextField);
 
         JLabel pin = new JLabel("PIN:");
@@ -42,25 +43,25 @@ public class Login extends JFrame implements ActionListener {
         pin.setFont(new Font("Raleway", Font.BOLD, 28));
         add(pin);
 
-        JPasswordField pinTextField = new JPasswordField();
+        pinTextField = new JPasswordField();
         pinTextField.setBounds(300, 220, 230, 30);
         add(pinTextField);
         
-        JButton signin = new JButton("SIGN IN");
+        signin = new JButton("SIGN IN");
         signin.setBounds(300, 300, 100, 30);
         signin.setBackground(Color.BLACK);
         signin.setForeground(Color.WHITE);
         signin.addActionListener(this);
         add(signin);
 
-        JButton clear = new JButton("CLEAR");
+        clear = new JButton("CLEAR");
         clear.setBounds(430, 300, 100, 30);
         clear.setBackground(Color.BLACK);
         clear.setForeground(Color.WHITE);
         clear.addActionListener(this);
         add(clear);
 
-        JButton signup = new JButton("SIGNUP");
+        signup = new JButton("SIGNUP");
         signup.setBounds(300, 350, 230, 30);
         signup.setBackground(Color.BLACK);
         signup.setForeground(Color.WHITE);
