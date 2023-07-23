@@ -17,27 +17,39 @@ public class Login extends JFrame {
         add(label);
 
         JLabel text = new JLabel("Welcome to ATM");
-        text.setBounds(200,40,400,40);
+        text.setBounds(200,40,400,30);
         text.setFont(new Font("Osward", Font.BOLD, 38));
         add(text);
 
         JLabel cardno = new JLabel("Card No.:");
-        cardno.setBounds(120,150,150,40);
+        cardno.setBounds(120,150,150,30);
         cardno.setFont(new Font("Raleway", Font.BOLD, 28));
         add(cardno);
 
         JTextField cardTextField = new JTextField();
-        cardTextField.setBounds(300, 150, 250, 30);
+        cardTextField.setBounds(300, 150, 230, 30);
         add(cardTextField);
 
         JLabel pin = new JLabel("PIN:");
-        pin.setBounds(120, 220,400,40);
+        pin.setBounds(120, 220,250,30);
         pin.setFont(new Font("Raleway", Font.BOLD, 28));
         add(pin);
 
         JTextField pinTextField = new JTextField();
-        pinTextField.setBounds(300, 220, 250, 30);
+        pinTextField.setBounds(300, 220, 230, 30);
         add(pinTextField);
+
+        JButton login = new JButton("SIGN IN");
+        login.setBounds(300, 300, 100, 30);
+        login.setBackground(Color.BLACK);
+        login.setForeground(Color.WHITE);
+        add(login);
+
+        JButton clear = new JButton("CLEAR");
+        clear.setBounds(430, 300, 100, 30);
+        clear.setBackground(Color.BLACK);
+        clear.setForeground(Color.WHITE);
+        add(clear);
 
         getContentPane().setBackground(Color.WHITE);;
         
