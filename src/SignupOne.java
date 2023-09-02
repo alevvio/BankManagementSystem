@@ -152,6 +152,7 @@ public class SignupOne extends JFrame implements ActionListener {
         next.setBackground(Color.WHITE);
         next.setFont(new Font("Raleway", Font.BOLD, 14));
         next.setBounds(620, 660, 80, 30);
+        next.addActionListener(this);
         add(next);
 
         getContentPane().setBackground(Color.WHITE);
@@ -164,13 +165,44 @@ public class SignupOne extends JFrame implements ActionListener {
         String formno="" + random; //long
         String name = nametf.getText();
         String fname = fnametf.getText();
-        String dob = ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();
+        String dob = ((JTextField) dobchoose.getDateEditor().getUiComponent()).getText();
+        String gender="";
         if(male.isSelected()) {
             gender = "Male";
+        } else if(female.isSelected()) {
+            gender="Female";
+        }
+        String email=emailtf.getText();
+        String marital=null;
+        if(married.isSelected()){
+            marital="Married";
+        }
+        else if(unmarried.isSelected()){
+            marital="Unmarried";
+        }
+        else if(other.isSelected()){
+            marital="Other";
+        }
+        String address=addresstf.getText();
+        String city=citytf.getText();
+        String state=statetf.getText();
+        String pin=pintf.getText();
+
+        try {
+            if(name.equals("")){
+                JOptionPane.showMessageDialog(null, "Name Is Required");
+            }
+            else {
+                Conn connn = new Conn();
+                String query = "INSERT INTO signup VALUES('"+formno+"', '"+name+"', '"+fname+"', '"+dob+"', '"+gender+"', '"+email+"', '"+marital+"', '"+address+"', '"+city+"', '"+pin+"', '"+state+"')";
+                connn.sta.executeUpdate(query);
+            }
+        } catch (Exception e){
+            System.out.println(e);
         }
     }
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         new SignupOne();
     }    
 }
