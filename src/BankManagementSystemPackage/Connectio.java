@@ -1,10 +1,12 @@
+package BankManagementSystemPackage;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-public class Conn {
-    
+public class Connectio {
+
     public static void main(String[] args) throws Exception {
         try {
             String url = "jdbc:mysql://localhost:3306/";
@@ -13,13 +15,13 @@ public class Conn {
             String userName = "root";
             String password = "AK4756lexpc!";
     
-            Connection conne = DriverManager.getConnection(url,userName, password);
+            Connection c = DriverManager.getConnection(url,userName, password);
     
             String sql = "CREATE DATABASE " + databaseName;
     
-            Statement sta = conne.createStatement();
-            sta.executeUpdate(sql);
-            sta.close();
+            Statement s = c.createStatement();
+            s.executeUpdate(sql);
+            s.close();
             JOptionPane.showMessageDialog(null, databaseName + " Database has been created successfully", "System Message", JOptionPane.INFORMATION_MESSAGE);
     
         } catch (Exception e) {

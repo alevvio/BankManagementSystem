@@ -1,3 +1,5 @@
+package BankManagementSystemPackage;
+
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
@@ -193,9 +195,9 @@ public class SignupOne extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Name Is Required");
             }
             else {
-                Conn connn = new Conn();
+                Connectio conn = new Connectio();
                 String query = "INSERT INTO signup VALUES('"+formno+"', '"+name+"', '"+fname+"', '"+dob+"', '"+gender+"', '"+email+"', '"+marital+"', '"+address+"', '"+city+"', '"+pin+"', '"+state+"')";
-                connn.sta.executeUpdate(query);
+                conn.s.executeUpdate(query);
             }
         } catch (Exception e){
             System.out.println(e);
