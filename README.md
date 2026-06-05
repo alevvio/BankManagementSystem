@@ -1,5 +1,4 @@
 # Bank Management System
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/alevvio/BankManagementSystem)
 
 A comprehensive Bank Management System built with Java Swing. This desktop application simulates the core functionalities of an Automated Teller Machine (ATM), providing a user-friendly graphical interface for various banking operations backed by a MySQL database.
 
